@@ -6810,3 +6810,35 @@ iframe {
     -o-border-radius: 4px;
     border-radius: 4px;
 }
+
+.consumer-sec{
+    padding: 20px;
+}
+.consumer-sec h2{
+    font-size: 40px;
+    line-height: normal;
+}
+.consumer-sec p{
+    margin-top: 10px;
+    font-size: large;
+}
+.consumer-sec ul{
+    padding-left: 10px;
+}
+.consumer-sec ul li {
+    list-style: none;
+    margin-bottom: 10px;
+    position: relative;
+    display: flex;
+    align-items: flex-start; /* Aligns the icon and text at the top */
+}
+
+.consumer-sec ul li::before {
+    content: '\f00c'; /* Font Awesome check icon */
+    font-family: 'FontAwesome'; /* Font Awesome font family */
+    margin-right: 10px; /* Adds some space between the icon and the text */
+    flex-shrink: 0; /* Prevents the icon from shrinking when the text wraps */
+    font-size: 16px; /* Adjust the icon size if needed */
+    line-height: 1.2; /* Adjust the line-height to match the text */
+    color: green; /* Change the check icon color to green */
+}
