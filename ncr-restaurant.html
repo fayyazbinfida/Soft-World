@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="css/font-awesome.min.css" />
     <link rel="stylesheet" href="css/font-awesome.min.css" />
     <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Slider Revolution CSS Files -->
     <link rel="stylesheet" type="text/css" href="revolution/css/settings.css" />
     <!-- ++++ style ++++ -->
@@ -405,15 +406,18 @@
                                 help increase guest engagement, speed and efficiency.
                             </p>
                             <div>
-                                <a href="#" target="_blank" class="btn btn-fill" style="color: rgb(0, 0, 0)">
-                                    See how they compare</a>
+                                <a id="compareButton" class="btn btn-fill" style="color: rgb(0, 0, 0);">
+                                    See how they compare
+                                    <span id="dropdownIcon">▼</span> <!-- Default down arrow -->
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!--end features box -->
-                <!-- features box -->
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+
+                <!-- features box - Aloha Cloud (2nd column)-->
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 feature-box" id="alohaCloudBox">
                     <div class="box-green-border">
                         <img src="images/ncr-products/restaurant/Alohafamilysmall-p-500.png" alt="Aloha Cloud"
                             class="img-responsive" />
@@ -425,8 +429,9 @@
                     </div>
                 </div>
                 <!--end features box -->
-                <!-- features box -->
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+
+                <!-- features box - Aloha Essentials (3rd column)-->
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 feature-box" id="alohaEssentialsBox">
                     <div class="box-green-border">
                         <img src="images/ncr-products/restaurant/Aloha Essentials-p-500.png" alt="Aloha Essentials"
                             class="img-responsive" />
@@ -439,7 +444,136 @@
                     </div>
                 </div>
                 <!--end features box -->
+
+                <!-- Button to replace Aloha Cloud -->
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" id="requestDemoButtonCloud" style="display: none;">
+                    <div class="box-green-border"
+                        style="text-align: center; display:flex; align-items: center; flex-direction: column; justify-content: end;">
+                        <h2>Aloha Cloud</h2>
+                        <a href="#" class="btn btn-fill" style="color: rgb(0, 0, 0); margin-top: 10px;">
+                            Request a Demo</a>
+                        <div>
+                            <a href="https://www.ncrvoyix.com/restaurant/aloha-cloud-pos"
+                                style="margin-top: 10px; display: inline-block;">
+                                Learn More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Button to replace Aloha Essentials -->
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" id="requestDemoButtonEssentials"
+                    style="display: none;">
+                    <div class="box-green-border"
+                        style="text-align: center; display:flex; align-items: center; flex-direction: column; justify-content: end;">
+                        <h2>Aloha Essentials</h2>
+                        <a href="#" class="btn btn-fill" style="color: rgb(0, 0, 0); margin-top: 10px;">
+                            Request a Demo</a>
+                        <div>
+                            <a href="https://www.ncrvoyix.com/restaurant/aloha-essentials-pos"
+                                style="margin-top: 10px; display: inline-block;">
+                                Learn More
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            <!-- Hidden Table for comparison - Full-width, mobile responsive table -->
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="comparisonTable"
+                    style="display: none; margin-top: 20px;">
+                    <div class="table-responsive">
+                        <table class="comparison-table">
+                            <thead>
+                                <tr>
+                                    <th style="width: 33%;">Feature</th>
+                                    <th style="width: 33%;">Aloha Cloud</th>
+                                    <th style="width: 33%;">Aloha Essentials</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Point of sale</td>
+                                    <td>✓</td>
+                                    <td>✓</td>
+                                </tr>
+                                <tr>
+                                    <td>Customer care and onboarding support</td>
+                                    <td>✓</td>
+                                    <td>✓</td>
+                                </tr>
+                                <tr>
+                                    <td>Payment processing and EMV</td>
+                                    <td>✓</td>
+                                    <td>✓</td>
+                                </tr>
+                                <tr>
+                                    <td>Basic loyalty</td>
+                                    <td>✓</td>
+                                    <td>✓</td>
+                                </tr>
+                                <tr>
+                                    <td>Restaurant grade hardware</td>
+                                    <td>✓</td>
+                                    <td>✓</td>
+                                </tr>
+                                <tr>
+                                    <td>Email marketing</td>
+                                    <td>✓</td>
+                                    <td>Optional add-on</td>
+                                </tr>
+                                <tr>
+                                    <td>Online ordering</td>
+                                    <td>Optional add-on</td>
+                                    <td>✓</td>
+                                </tr>
+                                <tr>
+                                    <td>Contactless order and payments via QR code</td>
+                                    <td>Optional add-on</td>
+                                    <td>✓</td>
+                                </tr>
+                                <tr>
+                                    <td>Advanced reporting and business intelligence</td>
+                                    <td>Optional add-on</td>
+                                    <td>✓</td>
+                                </tr>
+                                <tr>
+                                    <td>Gift cards</td>
+                                    <td>Optional add-on</td>
+                                    <td>✓</td>
+                                </tr>
+                                <tr>
+                                    <td>Advanced loyalty and marketing</td>
+                                    <td>Optional add-on</td>
+                                    <td>Optional add-on</td>
+                                </tr>
+                                <tr>
+                                    <td>Kitchen</td>
+                                    <td>Optional add-on</td>
+                                    <td>Optional add-on</td>
+                                </tr>
+                                <tr>
+                                    <td>Digital signage</td>
+                                    <td>Optional add-on</td>
+                                    <td>Optional add-on</td>
+                                </tr>
+                                <tr>
+                                    <td>Payroll</td>
+                                    <td>Optional add-on</td>
+                                    <td>Optional add-on</td>
+                                </tr>
+                                <tr>
+                                    <td>Labor and Inventory Management</td>
+                                    <td>Optional add-on</td>
+                                    <td>Optional add-on</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
     <!--end services Section-->
@@ -450,7 +584,8 @@
             <div class="row align-item-center">
                 <!-- Image -->
                 <div class="col-lg-6 col-md-6 col-sm-4 col-xs-12">
-                    <img src="images/ncr-products/restaurant/alohafrontofhouse-p-800.jpeg" alt="" class="img-responsive" style="border-radius: 10px;">
+                    <img src="images/ncr-products/restaurant/alohafrontofhouse-p-800.jpeg" alt="" class="img-responsive"
+                        style="border-radius: 10px;">
                 </div>
                 <!--end Image -->
 
@@ -468,7 +603,7 @@
                     </div>
                 </div>
                 <!--end Text -->
-                
+
             </div>
         </div>
     </section>
@@ -496,10 +631,11 @@
 
                 <!-- Image -->
                 <div class="col-lg-6 col-md-6 col-sm-4 col-xs-12">
-                    <img src="images/ncr-products/restaurant/Liberate-your-staff-from-manual-tasks-p-800.jpg" alt="" class="img-responsive" style="border-radius: 10px;">
+                    <img src="images/ncr-products/restaurant/Liberate-your-staff-from-manual-tasks-p-800.jpg" alt=""
+                        class="img-responsive" style="border-radius: 10px;">
                 </div>
                 <!--end Image -->
-                
+
             </div>
         </div>
     </section>
@@ -512,7 +648,8 @@
 
                 <!-- Image -->
                 <div class="col-lg-6 col-md-6 col-sm-4 col-xs-12">
-                    <img src="images/ncr-products/restaurant/Everything-to-run-your-restaurant-nd-more-p-800.jpg" alt="" class="img-responsive" style="border-radius: 10px;">
+                    <img src="images/ncr-products/restaurant/Everything-to-run-your-restaurant-nd-more-p-800.jpg" alt=""
+                        class="img-responsive" style="border-radius: 10px;">
                 </div>
                 <!--end Image -->
 
@@ -530,202 +667,297 @@
                     </div>
                 </div>
                 <!--end Text -->
-                
+
             </div>
         </div>
     </section>
     <!--end Image with Text Section-->
 
-    <!--services Section-->
+    <!--Offers Section-->
     <section class="bg-white o-hidden services dms-modern" id="services">
         <div class="container">
             <!--section title -->
-            <h2 class="b-clor">Services We Provide</h2>
+            <h2 class="b-clor">Our platform-based tech offers the unified capabilities you need</h2>
             <hr class="dark-line" />
             <!--end section title -->
             <div class="row">
-                <!-- features box -->
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                    <div class="box-green-border">
-                        <a href="#">
-                            <span class="icon-palette"></span>
-                            <div>Design</div>
-                        </a>
-                        <p>Build a long-term growth plan for your business and to assist you with gaining competitive advantage in the market.</p>
-                        <div class="service-overlay">
-                            <ul class="clearfix">
-                                <li>
-                                    <a href="logo-and-branding.html">
-                                        <i class="icon-palette"></i> Logo &amp; Branding
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="graphic-design.html">
-                                        <i class="icon-vector"></i> Graphic/Print Design
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="video-production.html">
-                                        <i class="icon-camera"></i> Video Production
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- End of .service-overlay -->
-                    </div>
-                </div>
-                <!--end features box -->
-                <!-- features box -->
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                    <div class="box-green-border">
-                        <a href="under-construction.html">
-                            <span class="icon-laptop-phone"></span>
-                            <div>Development</div>
-                        </a>
-                        <p>We developed professional looking yet simple website, web and mobile applications.</p>
-                        <div class="service-overlay">
-                            <ul class="clearfix">
-                                <li>
-                                    <a href="web-app-development.html">
-                                        <i class="icon-papers"></i> Web App Development
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="mobile-app-development.html">
-                                        <i class="icon-smartphone-embed"></i> Mobile App Development
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="ecommerce.html">
-                                        <i class="icon-cart"></i> eCommerce
-                                    </a>
-                                </li>
 
-                            </ul>
-                        </div>
-                        <!-- End of .service-overlay -->
-                    </div>
-                </div>
-                <!--end features box -->
                 <!-- features box -->
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <div class="box-green-border">
-                        <a href="services.html#bm-online-marketing">
-                            <span class="icon-chart-growth"></span>
-                            <div>Digital marketing</div>
-                        </a>
-                        <p>Our comprehensive Online Marketing strategy will boost your business &amp; website traffic hence monthly sales.</p>
-                        <div class="service-overlay">
-                            <ul class="clearfix">
-                                <li>
-                                    <a href="search-engine-optimization.html">
-                                        <i class="icon-magnifier"></i> Search Engine Optimization
-                                    </a>
-                                </li>
+                        <!-- Online Ordering Icon -->
+                        <span class="fas fa-shopping-cart"></span> <!-- Online Ordering Icon -->
+                        <h3>Online Ordering</h3>
+                        <p>Create your own digital channels, protect your profits, and own your guest experience online.
+                        </p>
 
-                                <li>
-                                    <a href="email-marketing.html">
-                                        <i class="icon-envelope-open"></i> Email Marketing
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="social-media-marketing.html">
-                                        <i class="icon-share"></i> Social Media Marketing
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+                        <!-- Arrow Icon instead of Learn More -->
+                        <a href="https://www.ncrvoyix.com/restaurant/online-ordering"
+                            style="text-decoration: none; color: inherit;">
+                            <i class="fas fa-arrow-right"></i> <!-- Arrow Icon -->
+                        </a>
                         <!-- End of .service-overlay -->
                     </div>
                 </div>
                 <!--end features box -->
+
                 <!-- features box -->
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <div class="box-green-border">
-                        <a href="services.html#bm-online-marketing">
-                            <span class="icon-cloud-gear"></span>
-                            <div>Managed IT</div>
+                        <!-- Online Ordering Icon -->
+                        <span class="fas fa-credit-card"></span> <!-- Online Ordering Icon -->
+                        <h3>Payments</h3>
+                        <p>Accept and process payments securely with next day funding, robust reporting and
+                            point-to-point encryption.</p>
+
+                        <!-- Arrow Icon instead of Learn More -->
+                        <a href="https://www.ncrvoyix.com/restaurant/payments"
+                            style="text-decoration: none; color: inherit;">
+                            <i class="fas fa-arrow-right"></i> <!-- Arrow Icon -->
                         </a>
-                        <p>We offers an array of managed IT services to support organizations with their business goals</p>
-                        <div class="service-overlay">
-                            <ul class="clearfix">
-                                <li>
-                                    <a href="it-product-sale.html">
-                                        <i class="icon-chart-settings"></i> IT Product Sales & Service
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="software-sales.html">
-                                        <i class="icon-disc"></i> Software Sales & Services
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="network-solution.html">
-                                        <i class="icon-lan"></i> Network Solution
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
                         <!-- End of .service-overlay -->
                     </div>
                 </div>
                 <!--end features box -->
+
                 <!-- features box -->
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <div class="box-green-border">
-                        <a href="services.html#bm-online-marketing">
-                            <span class="icon-cloud-upload"></span>
-                            <div>Technology</div>
+                        <!-- Online Ordering Icon -->
+                        <span class="fas fa-utensils"></span> <!-- Utensils Icon (kitchen) -->
+                        <h3>Kitchen production</h3>
+                        <p>Accept and process payments securely with next day funding, robust reporting and
+                            point-to-point encryption.</p>
+
+                        <!-- Arrow Icon instead of Learn More -->
+                        <a href="https://www.ncrvoyix.com/restaurant/aloha-essentials-pos/back-of-house"
+                            style="text-decoration: none; color: inherit;">
+                            <i class="fas fa-arrow-right"></i> <!-- Arrow Icon -->
                         </a>
-                        <p>We believe in using the right tools for the job. Explore the technologies that we use.</p>
-                        <div class="service-overlay">
-                            <ul class="clearfix">
-                                <li>
-                                    <a href="under-construction.html">
-                                        <i class="icon-magnifier"></i> Software Products | License
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="under-construction.html">
-                                        <i class="icon-server"></i> Hardware Products
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
                         <!-- End of .service-overlay -->
                     </div>
                 </div>
                 <!--end features box -->
+
                 <!-- features box -->
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <div class="box-green-border">
-                        <a href="services.html#bm-online-marketing">
-                            <span class="icon-list3"></span>
-                            <div>Testing</div>
+                        <!-- Online Ordering Icon -->
+                        <span class="fas fa-bullhorn"></span> <!-- Bullhorn Icon (marketing) -->
+                        <h3>Marketing and loyalty</h3>
+                        <p>Identify and engage your guests by unifying your data, creating personalized offers and
+                            connecting through email and SMS.</p>
+
+                        <!-- Arrow Icon instead of Learn More -->
+                        <a href="https://www.ncrvoyix.com/restaurant/aloha-essentials-pos/customer-engagement-and-loyalty"
+                            style="text-decoration: none; color: inherit;">
+                            <i class="fas fa-arrow-right"></i> <!-- Arrow Icon -->
                         </a>
-                        <p>SWI is an authorized Prometric and VUE testing center, providing official testing for IT vendors.</p>
-                        <div class="service-overlay">
-                            <ul class="clearfix">
-                                <li>
-                                    <a href="under-construction.html">
-                                        <i><img src="images/pro.png" /></i> Prometric
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="under-construction.html">
-                                        <i><img src="images/vue.png" /></i> Pearson VUE
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
                         <!-- End of .service-overlay -->
                     </div>
                 </div>
                 <!--end features box -->
+
+                <!-- features box -->
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="box-green-border">
+                        <!-- Digital Signage Icon -->
+                        <span class="fas fa-tv"></span> <!-- TV Icon (Digital Signage) -->
+                        <h3>Digital Signage</h3>
+                        <p>Display and update menu items, new offers, real-time order information, and much more through
+                            multimedia content.</p>
+
+                        <!-- Arrow Icon instead of Learn More -->
+                        <a href="https://www.ncrvoyix.com/restaurant/digital-signage"
+                            style="text-decoration: none; color: inherit;">
+                            <i class="fas fa-arrow-right"></i> <!-- Arrow Icon -->
+                        </a>
+                        <!-- End of .service-overlay -->
+                    </div>
+                </div>
+                <!--end features box -->
+
+                <!-- features box -->
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="box-green-border">
+                        <!-- Services and Support Icon -->
+                        <span class="fas fa-headset"></span> <!-- Headset Icon (Services and Support) -->
+                        <h3>Services and support</h3>
+                        <p>Get the most value out of your investment and simplify the planning, implementation, and
+                            management of your tech.</p>
+
+                        <!-- Arrow Icon instead of Learn More -->
+                        <a href="https://www.ncrvoyix.com/restaurant/services"
+                            style="text-decoration: none; color: inherit;">
+                            <i class="fas fa-arrow-right"></i> <!-- Arrow Icon -->
+                        </a>
+                        <!-- End of .service-overlay -->
+                    </div>
+                </div>
+                <!--end features box -->
+
             </div>
         </div>
     </section>
-    <!--end services Section-->
+    <!--end Offers Section-->
+
+    <!-- ++++ contact form design ++++ -->
+    <section class="bg-white o-hidden common-form-section contact-form-wrapper">
+        <div class="container">
+            <!--section title -->
+            <h2 class="b-clor">Talk to an expert</h2>
+            <p>Contact our customer service desk for more information on how to buy or to get support.</p>
+            <hr class="dark-line" />
+            <!--end section title -->
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12">
+                    <div class="customise-form contact-form">
+                        <form class="email_form" >
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <div class="form-group customised-formgroup">
+                                        <span class="icon-user"></span>
+                                        <input type="text" name="first_name" class="form-control" placeholder="First Name">
+                                    </div>
+                                </div>
+                                <div class="col-xs-6">
+                                    <div class="form-group customised-formgroup">
+                                        <span class="icon-user"></span>
+                                        <input type="text" name="last_name" class="form-control" placeholder="Last Name">
+                                    </div>
+                                </div>
+                                <div class="col-xs-6">
+                                    <div class="form-group customised-formgroup">
+                                        <span class="icon-envelope"></span>
+                                        <input type="email" name="email" class="form-control" placeholder="Email">
+                                    </div>
+                                </div>
+                                <div class="col-xs-6">
+                                    <div class="form-group customised-formgroup">
+                                        <span class="icon-telephone"></span>
+                                        <input type="text" name="phone" class="form-control" placeholder="Phone">
+                                    </div>
+                                </div>
+                                <!--<div class="col-xs-6">
+                                    <div class="form-group customised-formgroup">
+                                        <span class="icon-laptop"></span>
+                                        <input type="text" name="website" class="form-control" placeholder="Website">
+                                    </div>
+                                </div>-->
+                                <div class="col-xs-12">
+                                    <div class="form-group customised-formgroup">
+                                        <span class="icon-bubble"></span>
+                                        <textarea name="message" class="form-control" placeholder="Message"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btn-wrapper">
+                                <button type="submit" class="btn btn-fill" onclick="sendEmail()">Contact us now!</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="contact-info-box-wrapper">
+                        <div class="contact-info-box">
+                            <span class="icon-telephone"></span>
+                            <div>
+                                <h6>Give us a call</h6>
+                                <p>(92-21) 32626380-81</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-box">
+                            <span class="icon-envelope"></span>
+                            <div>
+                                <h6>Send an email</h6>
+                                <p>info@softworld.com.pk</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-box">
+                            <ul class="social-links">
+                                <li>
+                                    <a href="https://www.facebook.com/softworld.com.pk/" target="_blank">
+                                        <span class="fa fa-facebook"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="fa fa-twitter"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="fa fa-google-plus"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/softworld.com.pk/" target="_blank" ">
+                                        <span class="fa fa-instagram"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="fa fa-pinterest"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="fa fa-linkedin"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end contact form design -->
+
+    <!-- JavaScript to handle the click event -->
+    <script>
+        document.getElementById('compareButton').addEventListener('click', function () {
+            // Toggle the comparison table
+            var comparisonTable = document.getElementById('comparisonTable');
+            var featureBoxes = document.querySelectorAll('.feature-box');
+            var requestDemoButtonCloud = document.getElementById('requestDemoButtonCloud');
+            var requestDemoButtonEssentials = document.getElementById('requestDemoButtonEssentials');
+            var dropdownIcon = document.getElementById('dropdownIcon'); // Get the dropdown icon
+
+            if (comparisonTable.style.display === 'none') {
+                // Show comparison table at the bottom
+                comparisonTable.style.display = 'block';
+
+                // Hide the feature boxes
+                featureBoxes.forEach(function (box) {
+                    box.style.display = 'none';
+                });
+
+                // Show the request demo buttons in place of feature boxes
+                requestDemoButtonCloud.style.display = 'block';
+                requestDemoButtonEssentials.style.display = 'block';
+
+                // Change icon to up arrow
+                dropdownIcon.innerHTML = '▲';
+            } else {
+                // Hide the comparison table
+                comparisonTable.style.display = 'none';
+
+                // Show the feature boxes
+                featureBoxes.forEach(function (box) {
+                    box.style.display = 'block';
+                });
+
+                // Hide the request demo buttons
+                requestDemoButtonCloud.style.display = 'none';
+                requestDemoButtonEssentials.style.display = 'none';
+
+                // Change icon to down arrow
+                dropdownIcon.innerHTML = '▼';
+            }
+        });
+    </script>
+
 
     <!-- ++++ footer ++++ -->
     <footer id="footer">
