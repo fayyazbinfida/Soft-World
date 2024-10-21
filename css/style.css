@@ -6890,18 +6890,32 @@ iframe {
     }
 }
 
+
 .container-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* 2 columns: both take 50% of the width */
-  gap: 10px; /* Optional: Adds space between the columns */
-  align-items: start; /* Aligns the items to the top of the grid */
-  padding: 0 90px;
-}
-
-.heading-grid {
-  grid-column: 1; /* Places heading in the first column */
-}
-
-.para-grid {
-  grid-column: 2; /* Places paragraph in the second column */
-}
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 columns for larger screens */
+    gap: 10px; /* Adds space between the columns */
+    align-items: start; /* Aligns the items to the top of the grid */
+    padding: 0 90px;
+  }
+  
+  .heading-grid {
+    grid-column: 1; /* Places heading in the first column */
+  }
+  
+  .para-grid {
+    grid-column: 2; /* Places paragraph in the second column */
+  }
+  
+  /* Responsive adjustments for mobile devices */
+  @media (max-width: 768px) {
+    .container-grid {
+      grid-template-columns: 1fr; /* Single column on smaller screens */
+      padding: 0 20px; /* Adjust padding for mobile */
+    }
+  
+    .heading-grid, .para-grid {
+      grid-column: 1; /* Ensure both heading and text span across the entire width */
+    }
+  }
+  
