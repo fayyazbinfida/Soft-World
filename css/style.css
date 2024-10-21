@@ -6919,3 +6919,18 @@ iframe {
     }
   }
   
+  .iconz {
+    display: inline-block;
+    vertical-align: middle;
+    width: auto; /* Adjusts automatically to fit content */
+    height: 100%; /* Aligns with the font size */
+    margin-bottom: 3px;
+  }
+  
+  .iconz img {
+    width: auto;
+    height: 1em; /* Matches the height of the text */
+    object-fit: cover; /* Ensures the image scales correctly */
+    vertical-align: middle; /* Aligns with the text */
+  }
+  
