@@ -2643,7 +2643,10 @@ line-height: 1;
   content: "\e959";
 }
 .icon-cross-circle:before {
-  content: "\e95a";
+  content: "\e95a";   /* Assuming this is the correct icon code */
+  font-size: 25px;    /* Set the font size */
+  color: darkred;     /* Change the color to dark red */
+  font-weight: bolder; 
 }
 .icon-plus-circle:before {
   content: "\e95b";
