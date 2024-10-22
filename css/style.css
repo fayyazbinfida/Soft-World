@@ -6889,3 +6889,48 @@ iframe {
         padding: 8px;
     }
 }
+
+
+.container-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 columns for larger screens */
+    gap: 10px; /* Adds space between the columns */
+    align-items: start; /* Aligns the items to the top of the grid */
+    padding: 0 90px;
+  }
+  
+  .heading-grid {
+    grid-column: 1; /* Places heading in the first column */
+  }
+  
+  .para-grid {
+    grid-column: 2; /* Places paragraph in the second column */
+  }
+  
+  /* Responsive adjustments for mobile devices */
+  @media (max-width: 768px) {
+    .container-grid {
+      grid-template-columns: 1fr; /* Single column on smaller screens */
+      padding: 0 20px; /* Adjust padding for mobile */
+    }
+  
+    .heading-grid, .para-grid {
+      grid-column: 1; /* Ensure both heading and text span across the entire width */
+    }
+  }
+  
+  .iconz {
+    display: inline-block;
+    vertical-align: middle;
+    width: auto; /* Adjusts automatically to fit content */
+    height: 100%; /* Aligns with the font size */
+    margin-bottom: 3px;
+  }
+  
+  .iconz img {
+    width: auto;
+    height: 1em; /* Matches the height of the text */
+    object-fit: cover; /* Ensures the image scales correctly */
+    vertical-align: middle; /* Aligns with the text */
+  }
+  
