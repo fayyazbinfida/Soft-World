@@ -1449,6 +1449,7 @@ header .form-inline button {
     padding-bottom: 32px;
     border: solid 2px #555;
     border-radius: 20px;
+    background-size: cover;
 }
 
 .modal-content .list-with-arrow li {
